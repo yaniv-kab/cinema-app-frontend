@@ -32,14 +32,3 @@ input[type=button]:active{
   box-shadow: 0 5px slategray;
   transform: translateY(4px);
 }
-@media screen and (max-width: 540px) {
-  .app {
-      width: 400px;
-      display: grid;
-  }
-}
-@media screen and (min-width: 540px) and (max-width: 780px) {
-  .app {
-      width: 600px;
-  }
-}
