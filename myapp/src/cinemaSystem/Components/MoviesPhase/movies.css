@@ -1,0 +1,77 @@
+.movies-host{
+    position: relative;
+    top: 25px;
+    background-color: transparent;
+}
+.search-div{
+    position: relative;
+    border: 2px solid black;
+    background: linear-gradient(90deg, #506D84 0%, rgb(136, 158, 175,0.7) 100%, rgba(84,70,252,0.6225840678068102) 100%);
+    border-radius: 25px;
+    width: 35%;
+    height: 35px;
+    left: 32%;
+}
+.rendering-allmovies{
+    left: 6%;
+    position: relative;
+    width: 75%;
+    top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-auto-rows: auto;
+    background-color: transparent;
+}
+
+.movie-main-card{ 
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, #506D84 0%, rgb(136, 158, 175,0.7) 100%, rgba(84,70,252,0.6225840678068102) 100%);
+    margin: 10px;
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+}
+.image-continer{
+    position: relative;
+    width: 245px;
+    height: 352px;
+}
+.movie-text-header{
+    color: white;
+    font-size: medium;
+    background-color: rgba(255, 255, 255, .15);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.movie-image{
+    position: relative;
+    border-radius:5px;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.movie-watched{
+    position: relative;
+
+}
+.movies-btns{
+    position:relative;
+    padding: 5px;
+}
+.edit-main{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    /* background-color: rgb(100, 100, 255); */
+    background: rgb(63,94,251);
+    background: linear-gradient(90deg, #506D84 0%, rgb(136, 158, 175,0.7) 100%, rgba(84,70,252,0.6225840678068102) 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 450px;
+    min-height: 350px;
+    left: 33%;
+    position: relative;
+    margin: 20px;
+    padding: 10px;
+    padding-top: 15px;
+}

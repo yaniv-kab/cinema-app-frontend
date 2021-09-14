@@ -3,6 +3,7 @@ import { Switch, Route, useHistory } from 'react-router-dom'
 import AllUsersComp from './AllUsersComp'
 import AddUserComp from './AddUserComp'
 import EditUserComp from './EditUserComp'
+import './users.css'
 const UsersComp = (props) => {
     const history = useHistory()
     let allYellowed;
@@ -15,8 +16,7 @@ const UsersComp = (props) => {
         addYellowed = "#3EDBF0"
     }
     return (
-        <div style={{ border: "3px solid black", width: "750px" }}>
-            <h3>Users</h3>
+        <div className="users-router-menu">
             <input type="button" style={{ backgroundColor: allYellowed }} value="All Users" onClick={() => { props.history.push('/main/users/all') }} />
             <input type="button" style={{ backgroundColor: addYellowed }} value="Add User" onClick={() => { props.history.push("/main/users/add") }} />
             <Switch>

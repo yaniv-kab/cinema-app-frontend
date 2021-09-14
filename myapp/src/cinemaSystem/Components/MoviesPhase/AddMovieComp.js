@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
 import MoviesUtils from "../../MoviesUtils/MoviesUtils";
+import "./movies.css"
 
 const AddMovieComp = () => {
     const history = useHistory()
@@ -20,7 +21,7 @@ const AddMovieComp = () => {
         history.push("/main/movies/all")
     }
     return (
-        <div>
+        <div className="edit-main">
             <h3>Add Movie : </h3>
             Name : <input type="text" value={name} onChange={e => { setName(e.target.value) }} /><br />
             Genres :<input type="text" value={genres} onChange={(e) => {

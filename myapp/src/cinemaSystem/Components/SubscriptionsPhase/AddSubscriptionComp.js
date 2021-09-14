@@ -2,7 +2,7 @@ import react, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import MembersUtils from '../../MembersUtils/MembersUtils';
 import SubscriptionsUtils from '../../SubscriptionsUtils/SubscriptionsUtils';
-
+import "./subscriptions.css"
 
 
 const AddSubscriptionsComp = () => {
@@ -28,7 +28,7 @@ const AddSubscriptionsComp = () => {
         history.push('/main/subscriptions/all')
     }
     return (
-        <div>
+        <div className="edit-sub">
             <h3>Add New Member</h3>
             Name : <input type="text" onChange={e => setMemberName(e.target.value)} /><br />
             Email : <input type="text" onChange={e => setMemberEmail(e.target.value)} /><br />

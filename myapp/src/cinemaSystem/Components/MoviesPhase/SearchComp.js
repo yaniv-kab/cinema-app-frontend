@@ -1,4 +1,5 @@
 import react, { useLayoutEffect, useState } from 'react';
+import './movies.css'
 
 const SearchComp = (props) => {
 
@@ -21,8 +22,8 @@ const SearchComp = (props) => {
 
     }
     return (
-        <div>
-            Find Movie : <input type="text" onChange={e => { setMovieName(e.target.value.toLowerCase()) }} /> <input type="button" value="Find" onClick={searchMovie} />
+        <div className="search-div">
+            Find Movie : <input className="search-input" type="text" onChange={e => { setMovieName(e.target.value.toLowerCase()) }} /> <input type="button" value="Find" onClick={searchMovie} />
         </div>
     )
 }

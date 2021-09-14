@@ -4,6 +4,7 @@ import MoviesUtils from '../../MoviesUtils/MoviesUtils';
 import { SubscriptionsContext } from './SubscriptionsContext';
 import AddMovieToSubscriptionComp from './AddNewMovieToSubscriptionComp';
 import SubscriptionsUtils from '../../SubscriptionsUtils/SubscriptionsUtils';
+import './subscriptions.css'
 
 const SubscribeToNewMovieComp = (props) => {
 
@@ -54,12 +55,12 @@ const SubscribeToNewMovieComp = (props) => {
     if (moviesMemberWatched) {
         watchedMoviesListToRender = moviesMemberWatched.map((movie, i) => {
             let watchedDate = new Date(movie.date)
-            return <li key={i}><Link style={{ color: "unset", textDecorationColor: "#3EDBF0", textDecorationThickness: "3px" }} to={`/main/movies/all/${movie.id}`}>{movie.movieName}</Link> , {watchedDate.toLocaleDateString("en-TT")}</li>
+            return <li key={i}><Link style={{ color: "unset", textDecorationColor: "#D4ECDD", textDecorationThickness: "3px" }} to={`/main/movies/all/${movie.id}`}>{movie.movieName}</Link> , {watchedDate.toLocaleDateString("en-TT")}</li>
         })
     }
 
     return (
-        <div style={{ border: "3px solid black", width: "400px" }}>
+        <div className="movie-watch">
             <b>Movies Watched</b><br />
             <input type="button" value="Subscribe to new movie" onClick={subscribeWindow} />
             {addMovieToSubscription}

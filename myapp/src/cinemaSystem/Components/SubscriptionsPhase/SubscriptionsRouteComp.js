@@ -21,8 +21,7 @@ const SubscriptionsRouteComp = () => {
 
 
     return (
-        <div style={{ border: "3px solid black", width: "750px" }}>
-            <h2>Subscriptions</h2>
+        <div>
             <input type="button" style={{ backgroundColor: allYellowed }} value="All Members" onClick={() => {
                 if (permissions.includes("View Subscriptions")) { history.push('/main/subscriptions/all') } else {
                     alert("You Dont Have The Right Permission")

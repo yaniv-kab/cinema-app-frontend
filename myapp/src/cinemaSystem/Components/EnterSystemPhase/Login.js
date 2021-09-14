@@ -2,6 +2,7 @@ import react, { useEffect, useState } from 'react'
 import utils from '../../utils/utils';
 import { Link } from 'react-router-dom';
 import usersDataUtils from '../../utils/usersDataUtils';
+import "./enter.css"
 
 const LoginComp = (props) => {
     const [userName, setUserName] = useState('');
@@ -45,17 +46,17 @@ const LoginComp = (props) => {
     }
 
     return (
-        <div style={{}}>
-            <h2 style={{ borderBottom: "2px solid white", width: "335px" }}>Login To Your Cinema System</h2> <br />
+        <div className='loginPhase'>
+            <h2>Login To Your Cinema System</h2> <br />
             User Name : <input type="text" placeholder="Enter Your User Name" onChange={e => setUserName(e.target.value)} /><br />
-            Password : <input type="password" placeholder="Enter Your Password" onChange={e => setPassword(e.target.value)} /><br />
+            Password: <input type="password" placeholder="Enter Your Password" onChange={e => setPassword(e.target.value)} /><br />
             <input type="button" value="Login" onClick={loginUser} /> <br />
             New User ? : <Link style={{ color: "unset", textDecorationColor: "#3EDBF0", textDecorationThickness: "3px" }} onClick={createAcc}> Create Account</Link>
 
 
 
 
-        </div>
+        </div >
     )
 }
 export default LoginComp

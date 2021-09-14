@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import premissionsUtils from '../../utils/premissionsUtils';
 import usersDataUtils from '../../utils/usersDataUtils';
 import utils from '../../utils/utils';
-
+import './users.css'
 
 const EditUserComp = (props) => {
     const userId = props.match.params.id
@@ -97,7 +97,7 @@ const EditUserComp = (props) => {
     }
 
     return (
-        <div >
+        <div className="edit-user">
             <h3>Edit User :{firstNameUser} {lastNameUser}</h3>
             First Name :<input type="text" value={user.firstName} onChange={e => {
                 setFirstName(e.target.value)

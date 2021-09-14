@@ -5,6 +5,7 @@ import AllMoviesComp from './AllMoviesComp';
 import EditMovieComp from './EditMovieComp';
 import { MoviesContextProvider } from './MoviesContext';
 import MovieCardComp from './MovieCardComp'
+import './movies.css'
 
 
 const MoviesComp = () => {
@@ -21,8 +22,7 @@ const MoviesComp = () => {
         addYellowed = "#3EDBF0"
     }
     return (
-        <div style={{ border: "3px solid black", width: "750px" }}>
-            <h3>Movies</h3>
+        <div className="movies-host">
             <input type="button" style={{ backgroundColor: allYellowed }} value="All Movies" onClick={() => {
                 if (permissions.includes("View Movies")) { history.push('/main/movies/all') } else {
                     alert("You Dont Have The Right Permission")

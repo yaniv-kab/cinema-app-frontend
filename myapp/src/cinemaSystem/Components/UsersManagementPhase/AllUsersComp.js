@@ -1,6 +1,7 @@
 import react, { useEffect, useState } from 'react'
 import utils from '../../utils/utils';
 import UserCardComp from './UserCardComp';
+import './users.css'
 const AllUserComp = (props) => {
     const [usersData, setUsersData] = useState([]);
 
@@ -26,8 +27,7 @@ const AllUserComp = (props) => {
         }} />
     })
     return (
-        <div>
-            <h3>All Users :</h3>
+        <div className="allusers">
             {usersCardsToRender}
 
 

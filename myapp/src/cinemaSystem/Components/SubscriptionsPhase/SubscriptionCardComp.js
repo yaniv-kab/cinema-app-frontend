@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import MembersUtils from '../../MembersUtils/MembersUtils';
 import SubscriptionsUtils from '../../SubscriptionsUtils/SubscriptionsUtils';
 import SubscribeToNewMovieComp from './SubscribeToNewMovieComp';
-
+import './subscriptions.css'
 
 const SubscriptionCardComp = (props) => {
 
@@ -47,10 +47,10 @@ const SubscriptionCardComp = (props) => {
         subscribeToNewMovie = <SubscribeToNewMovieComp member={member} />
     }
     return (
-        <div style={{ border: "3px solid black", width: "500px" }}>
+        <div className="subs-router-menu">
             <h3>{member.name}</h3>
-            Email : {member.email}<br />
-            City : {member.city}<br />
+            <b>Email :</b> {member.email}<br />
+            <b>City :</b> {member.city}<br />
             {editButton}
             {deleteButton}
             {subscribeToNewMovie}

@@ -1,6 +1,14 @@
-.App {
+.app {
   text-align: center;
+  align-items: center;
+  display: grid;
 }
+ul{
+  font-size: 16px;
+  text-align: left;
+  border: 3px solid transparent; 
+}
+
 input[type=text],select{
   transition: 0.5s;
   margin: 8px 0;
@@ -18,18 +26,20 @@ input[type=button]{
   font-size: 16px;
   margin: 3px 2px;
   cursor: pointer;
+  border-radius: 8px;
 }
 input[type=button]:active{
   box-shadow: 0 5px slategray;
   transform: translateY(4px);
 }
 @media screen and (max-width: 540px) {
-  .view {
+  .app {
       width: 400px;
+      display: grid;
   }
 }
 @media screen and (min-width: 540px) and (max-width: 780px) {
-  .view {
+  .app {
       width: 600px;
   }
 }

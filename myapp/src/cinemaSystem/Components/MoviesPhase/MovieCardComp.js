@@ -4,6 +4,7 @@ import MembersUtils from '../../MembersUtils/MembersUtils';
 import MoviesUtils from '../../MoviesUtils/MoviesUtils';
 import { useHistory } from 'react-router-dom';
 import SubscriptionsUtils from '../../SubscriptionsUtils/SubscriptionsUtils';
+import './movies.css'
 
 
 const UserCardComp = (props) => {
@@ -85,26 +86,29 @@ const UserCardComp = (props) => {
     if (membersWatchedMovies.length > 0) {
         membersWathcedToRender = membersWatchedMovies.map(member => {
             let date = new Date(member.date)
-            return <li key={member.id}><Link style={{ color: "unset", textDecorationColor: "#3EDBF0", textDecorationThickness: "3px" }} to={`/main/subscriptions/all/${member.id}`} > {member.name}</Link> , {date.toLocaleDateString("en-TT")}</li>
+            return <li key={member.id}><Link style={{ color: "unset", textDecorationColor: "#D4ECDD", textDecorationThickness: "3px" }} to={`/main/subscriptions/all/${member.id}`} > {member.name}</Link> , {date.toLocaleDateString("en-TT")}</li>
         })
     }
     return (
-        <div style={{ border: "3px solid black", width: "500px" }}>
-            <b>{movie.name} , {date.getFullYear()}</b><br />
-            genres : {genresToRender}
-            <div style={{ width: "100px" }}>
-                <img src={movie.image} width="70px" />
+        <div className="movie-main-card">
+            <div className="image-container">
+                <img className="movie-image" src={movie.image} alt="not found" /><br />
+                <div className="movie-text-header">
+                    <b>{movie.name} , {date.getFullYear()}</b><br />
+                    genres : {genresToRender}
+                </div>
             </div>
-            <div style={{ border: "3px solid black", position: "relative", width: "300px", bottom: "82px", left: "90px" }}  >
-                Subscriptions Watched
-                <ul>
+            <div className="movie-watched">
+                <b style={{ color: "#152D35" }}>Subscriptions Watched</b>
+                <ul >
                     {membersWathcedToRender}
                 </ul>
 
 
             </div>
-
-            {editButton}{deleteButton}
+            <div className="movies-btns">
+                {editButton}{deleteButton}
+            </div>
 
         </div >
     )

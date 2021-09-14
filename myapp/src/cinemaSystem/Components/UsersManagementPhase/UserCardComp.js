@@ -1,6 +1,7 @@
 import react, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
 import utils from "../../utils/utils";
+import './users.css'
 const UserCardComp = (props) => {
     let history = useHistory()
     const [user, setUser] = useState(props.user)
@@ -21,7 +22,7 @@ const UserCardComp = (props) => {
         permissionsToRender = user.permissions.toString()
     }
     return (
-        <div style={{ border: "3px solid black", width: "500px" }}>
+        <div className="user-card-comp">
             Name : {user.firstName} {user.lastName}<br />
             User Name : {user.userName}<br />
             Session Time Out(Minutes) : {user.sessionTimeOut}  <br />

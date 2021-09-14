@@ -3,7 +3,7 @@ import MembersUtils from '../../MembersUtils/MembersUtils';
 import SubscriptionsUtils from '../../SubscriptionsUtils/SubscriptionsUtils';
 import { SubscriptionsContext } from './SubscriptionsContext';
 import SubscriptionCardComp from './SubscriptionCardComp';
-
+import './subscriptions.css'
 
 
 const AllSubscriptionsComp = (props) => {
@@ -34,7 +34,7 @@ const AllSubscriptionsComp = (props) => {
     }
 
     return (
-        <div>
+        <div className="subs-rendering">
             {subscriptionsToRender}
 
         </div>

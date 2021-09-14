@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import utils from '../../utils/utils'
+import "./enter.css"
 
 
 const CreateAccountComp = (props) => {
@@ -26,7 +27,7 @@ const CreateAccountComp = (props) => {
     }
 
     return (
-        <div>
+        <div className="loginPhase">
             <h2>Create An Account</h2>
             User name : <input type="text" value={userName} onChange={e => setUserName(e.target.value)} /><br />
             Password : <input type="text" placeholder="Enter Password" onChange={e => setPassword(e.target.value)} /><br />

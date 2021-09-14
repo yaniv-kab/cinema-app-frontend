@@ -4,7 +4,7 @@ import MoviesUtils from '../../MoviesUtils/MoviesUtils';
 import SubscriptionsUtils from '../../SubscriptionsUtils/SubscriptionsUtils';
 import MovieCard from './MovieCardComp'
 import SearchComp from './SearchComp';
-
+import './movies.css'
 
 
 const AllMoviesComp = () => {
@@ -44,8 +44,9 @@ const AllMoviesComp = () => {
     return (
         <div>
             <SearchComp movies={movies} updateMovies={(data) => { setSearchMovies(data) }} />
-            <h3>All Movies</h3>
-            {movieCardToRender}
+            <div className="rendering-allmovies">
+                {movieCardToRender}
+            </div>
 
 
 

@@ -51,13 +51,15 @@ const AddMovieToSubscriptionComp = (props) => {
         return <option key={mov.id}>{mov.name}</option>
     })
     return (
-        <div style={{ border: "4px solid #3EDBF0", width: "300px" }}>
-            Add A New Movie <br />
+        <div className="main-add-a-movie">
+            <b>Add A New Movie</b> <br />
+            <span className='input-a-movie-data'>movie: </span>
             <select onChange={e => { setMovieSelected(e.target.value) }} value={movieSelected}>
                 <option>Select Movie</option>
                 {movieOptions}
 
-            </select>
+            </select><br />
+            <span className='input-a-movie-data'>Date: </span>
             <input type="date" onChange={e => setDateWatched(e.target.value)} /><br />
             <input type="button" value="Subscribe" onClick={subscribeMovieToMember} />
 

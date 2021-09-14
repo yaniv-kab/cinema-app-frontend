@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom'
 import premissionsUtils from '../../utils/premissionsUtils'
 import usersDataUtils from '../../utils/usersDataUtils'
 import utils from '../../utils/utils'
+import './users.css'
 
 
 const AddUserComp = () => {
@@ -97,7 +98,7 @@ const AddUserComp = () => {
     }
 
     return (
-        <div>
+        <div className="edit-user">
             <form onSubmit={saveUser}>
                 <h3>Add New User </h3>
                 First Name :<input type="text" onChange={e => { setFirstName(e.target.value) }} /> <br />
